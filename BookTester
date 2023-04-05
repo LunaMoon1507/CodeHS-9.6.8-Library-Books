@@ -1,0 +1,32 @@
+import java.util.ArrayList;
+
+public class BookTester
+{
+    public static void main(String[] args)
+    {
+        ArrayList<Book> library = new ArrayList<Book>();
+        
+        Book txt1 = new TextBook("AP Biology", "Psychologist", 2, false);
+        Book txt2 = new TextBook("AP Human Geography", "Human Geographist", 3, false); 
+        Book txt3 = new TextBook("AP Calculus", "Mathematician", 1, true); 
+        
+        Book novel1 = new Novel("Percy Jackson", "Rick Riordan", 8, "Fiction");
+        Book novel2 = new Novel("Ready Player One", "Earnest Cline", 9, "Science Fiction"); 
+        Book novel3 = new Novel("Projet Hail Mary", "Andy Weir", 10, "Science Fiction"); 
+        
+        library.add(txt1);
+        library.add(txt2);
+        library.add(txt3);
+        
+        library.add(novel1);
+        library.add(novel2);
+        library.add(novel3);
+        
+        for(Book b: library){
+            System.out.println(b);
+            System.out.println(b.getTitle());
+            System.out.println(b.getAuthor());
+        }
+        
+    }
+}
